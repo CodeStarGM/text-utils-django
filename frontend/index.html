@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text_Utils</title>
+  </head>
+  <body>
+    <h1>Welcome To Text Utils</h1>
+    <form action="/analyze" method="post">
+      {% csrf_token %}
+      <textarea name="text"></textarea>
+      <br />
+      <br />
+      <input type="checkbox" name="remove_punctuations" id="" /> Remove
+      Punctuations
+      <br />
+      <br />
+      <input type="checkbox" name="capital_text" id="" /> Text Capitalize
+      <br />
+      <br />
+      <input type="checkbox" name="lower_text" id="" /> Text Lower
+      <br />
+      <br />
+      <input type="submit" name="" value="Analyze" />
+      <br />
+      <br />
+    </form>
+  </body>
+</html>
