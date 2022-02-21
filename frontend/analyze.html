@@ -4,11 +4,66 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Results | Text-Utils</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
   </head>
   <body>
-    <h1>Here is your {{purpose}} Text</h1>
-    <textarea id="" cols="30" rows="10">{{result}}</textarea>
-    <h1>Total Word Count {{textCount}}</h1>
+    <nav
+      style="
+        display: flex;
+        width: 100%;
+        background-color: rgb(236, 236, 236);
+        height: 10vh;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2%;
+      "
+    >
+      <div style="display: flex; align-items: center">
+        <img
+          style="height: auto; width: 50px"
+          src="https://avatars.githubusercontent.com/u/68224623?s=400&u=b93abdf61169f4616478c05eacac0bc3ac0a54ad&v=4"
+        />
+        <h1 style="margin-left: 10px; font-size: 24px">Text-Utils</h1>
+      </div>
+
+      <div>
+        <a class="button is-warning">
+          <strong>Buy Me A Coffee ❤️</strong>
+        </a>
+        <a
+          href="https://github.com/CodeStarGM/text-utils-django"
+          class="button is-danger"
+        >
+          <strong>Contribute ❤️</strong>
+        </a>
+      </div>
+    </nav>
+
+    <div class="mt-6 columns is-mobile">
+      <div class="column"></div>
+      <div class="column">
+        <div class="field">
+          <label class="label">Here is your {{purpose}} </label>
+          <div class="control">
+            <textarea name="text" class="textarea">{{result}}</textarea>
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <a href="/" class="button is-link"> Go Back</a>
+            <label class="label"
+              >Total Character Count {{textCount}} {{char_info}}</label
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="column"></div>
+    </div>
   </body>
 </html>

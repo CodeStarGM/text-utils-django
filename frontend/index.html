@@ -4,28 +4,127 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Text_Utils</title>
+    <title>Welcome | Text-Utils</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
   </head>
   <body>
-    <h1>Welcome To Text Utils</h1>
-    <form action="/analyze" method="post">
+    <nav
+      style="
+        display: flex;
+        width: 100%;
+        background-color: rgb(236, 236, 236);
+        height: 10vh;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2%;
+      "
+    >
+      <div style="display: flex; align-items: center">
+        <img
+          style="height: auto; width: 50px"
+          src="https://avatars.githubusercontent.com/u/68224623?s=400&u=b93abdf61169f4616478c05eacac0bc3ac0a54ad&v=4"
+        />
+        <h1 style="margin-left: 10px; font-size: 24px">Text-Utils</h1>
+      </div>
+
+      <div>
+        <a class="button is-warning">
+          <strong>Buy Me A Coffee ❤️</strong>
+        </a>
+        <a class="button is-danger">
+          <strong>Contribute ❤️</strong>
+        </a>
+      </div>
+    </nav>
+    <form class="mt-6" action="/analyze" method="post">
       {% csrf_token %}
-      <textarea name="text"></textarea>
-      <br />
-      <br />
-      <input type="checkbox" name="remove_punctuations" id="" /> Remove
-      Punctuations
-      <br />
-      <br />
-      <input type="checkbox" name="capital_text" id="" /> Text Capitalize
-      <br />
-      <br />
-      <input type="checkbox" name="lower_text" id="" /> Text Lower
-      <br />
-      <br />
-      <input type="submit" name="" value="Analyze" />
-      <br />
-      <br />
+      <div class="columns is-mobile">
+        <div class="column"></div>
+        <div class="column">
+          <div class="field">
+            <label class="label">Add Your Text Below</label>
+            <div class="control">
+              <textarea
+                name="text"
+                class="textarea"
+                placeholder="Textarea"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="columns is-mobile">
+            <div class="column">
+              <div class="field">
+                <div class="control">
+                  <label class="checkbox has-text-danger-dark">
+                    <input type="checkbox" name="remove_punctuations" />
+                    Remove Punctuations
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="field">
+                <div class="control">
+                  <label class="checkbox has-text-danger-dark">
+                    <input type="checkbox" name="capital_text" />
+                    Text Capitalize
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="field">
+                <div class="control">
+                  <label class="checkbox has-text-danger-dark">
+                    <input type="checkbox" name="lower_text" />
+                    Lower case text
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="columns is-mobile">
+            <div class="column">
+              <div class="field">
+                <div class="control">
+                  <label class="checkbox has-text-danger-dark">
+                    <input type="checkbox" name="extra_space_remover" />
+                    Extra Space Remover
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="field">
+                <div class="control">
+                  <label class="checkbox has-text-danger-dark">
+                    <input type="checkbox" name="char_count" />
+                    Character Counter
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link">Analyze</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="column"></div>
+      </div>
     </form>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css"
+    />
   </body>
 </html>
